@@ -1,0 +1,25 @@
+body {
+  margin: 0px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.block {
+  height: 300px;
+  width: 50px;
+  background-color: black;
+  position: fixed;
+}
+
+.left_block {
+  top: 0px;
+  left: 0px;
+}
+
+.right_block {
+  top: 0px;
+  right: 0px;
+}
