@@ -23,3 +23,12 @@ section {
   top: 0px;
   right: 0px;
 }
+
+.ball {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(155, 136, 136);
+  border-radius: 50%;
+  top: 150px;
+  right: 150px;
+}
