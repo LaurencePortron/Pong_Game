@@ -1,8 +1,9 @@
+const leftPaddle = document.querySelector('.left_block');
+const rightPaddle = document.querySelector('.right_block');
+const ball = document.querySelector('.ball');
+
 let axeY = 0;
 let axeX = 0;
-
-const leftBlock = document.querySelector('.left_block');
-const rightBlock = document.querySelector('.right_block');
 
 document.addEventListener('keydown', (eventOnArrowKeysForLeftBlock) => {
   switch (eventOnArrowKeysForLeftBlock.key) {
