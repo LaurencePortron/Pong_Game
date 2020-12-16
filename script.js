@@ -1,6 +1,5 @@
 const leftPaddle = document.querySelector('.left_block');
 const rightPaddle = document.querySelector('.right_block');
-const ball = document.querySelector('.ball');
 
 let axeY = 0;
 let axeX = 0;
@@ -48,3 +47,29 @@ document.addEventListener('keydown', (eventOnArrowKeysForRightBlock) => {
       return;
   }
 });
+
+function myMove() {
+  let screenHeight = window.innerHeight;
+  let screenWidth = window.innerWidth;
+  const pong = document.getElementById('animate');
+  const id = setInterval(frame, 1);
+  const maxDistToTravel = 600; // height of current screen
+  let position = 0; // starting position of
+  let end = maxDistToTravel;
+  let direction = 1;
+
+  function frame() {
+    if (position === end) {
+      direction *= -1; // reverses current direction
+
+      end = Math.abs(maxDistToTravel - end); // stops at starting position to then start again
+    }
+
+    position += direction;
+
+    pong.style.top = position + 'px';
+    pong.style.bottom = position + 'px';
+    pong.style.left = position + 'px';
+    pong.style.right = position + 'px';
+  }
+}
